@@ -1,0 +1,115 @@
+/** @format */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: rgb(238, 227, 207);
+}
+.img {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.calender {
+	width: 490px;
+	height: 570px;
+	box-shadow: 0px 1px 10px 10px teal;
+	position: absolute;
+	top: 200px;
+}
+.month {
+	width: 100%;
+	height: 120px;
+	border-bottom: 2px solid grey;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2px;
+	text-align: center;
+}
+.month i {
+	cursor: pointer;
+	margin: 0 20px;
+}
+.date span {
+	font-size: 20px;
+	font-weight: 700;
+}
+.month span {
+	font-size: 30px;
+	letter-spacing: 2px;
+}
+.weekdays {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	padding: 0px 5px;
+	font-weight: 700;
+}
+.weekdays div {
+	font-size: 20px;
+	letter-spacing: 1px;
+	width: 68px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.days__all {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 2px;
+	margin-left: 10px;
+	font-size: 15px;
+	font-weight: 700;
+}
+.days__all div {
+	font-size: 20px;
+	margin: 3px;
+	width: 60px;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.days__all div:hover:not(#today, .prev-date, .next-date) {
+	background-color: rgb(177, 201, 247);
+	cursor: pointer;
+}
+
+#today {
+	border: 3px solid tomato;
+	border-radius: 30px;
+}
+/** @format */
+
+#no-mobile {
+	position: absolute;
+	z-index: 99;
+	height: 100vh;
+	background-color: cornflowerblue;
+	color: wheat;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 32px;
+	top: 0;
+}
+@media screen and (max-width: 650px) {
+	#no-mobile {
+		display: none;
+	}
+}
+
